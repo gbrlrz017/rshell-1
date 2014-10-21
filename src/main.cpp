@@ -93,8 +93,12 @@ int main()
 		}
 
 		// If the input is "exit", then exit; 
-		if (strcmp(str, "exit") == 0) exit(0);
-
+		if (strcmp(str, "exit") == 0)
+		{
+			cout << "logout" << endl << endl;
+			cout << "[Process Completed]" << endl;
+			exit(0);
+		}
 		// Separate the string into commands and save them into a vector
 		vector<string> vs;
 		string tmp;
