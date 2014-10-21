@@ -58,5 +58,10 @@ How to run rshell
 Bugs
 ---------
 
+* If there is space between multiple commands and connected by connectors, the shell will not work peoperly..
 
-* 
+* "&&" and "||" do not work properly when there is invalid command.
+
+* ";" can not connect a empty command.
+
+ 
