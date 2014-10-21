@@ -138,7 +138,7 @@ int main()
 				{
 					wait(NULL);
 					vs.pop_back();
-					continue;
+					//continue;
 				}	
 			}
 			else if (str[i] == '|')

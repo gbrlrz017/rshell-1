@@ -1,0 +1,117 @@
+Script started on Tue Oct 21 12:31:53 2014
+~
+mxu008@hammer $ ls
+[0m[38;5;27mDesktop[0m/    [38;5;27mDownloads[0m/  [38;5;27mPictures[0m/  [38;5;27mTemplates[0m/  [38;5;27mcs10[0m/   [38;5;27mcs10w[0m/  [38;5;27mcs14[0m/  [38;5;27mcs61s[0m/  [38;5;27mucr-cs100[0m/
+[38;5;27mDocuments[0m/  [38;5;27mMusic[0m/      [38;5;27mPublic[0m/    [38;5;27mVideos[0m/     [38;5;27mcs100[0m/  [38;5;27mcs12[0m/   [38;5;27mcs61[0m/  [38;5;27mtext[0m/
+[m~
+mxu008@hammer $ cs100
+[0;91m
+===============================================================================
+|                                                                             |
+| You have enabled settings specific for cs100.                               |
+|                                                                             |
+===============================================================================
+[0m
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~[0;95m [0;36m$[0m ls
+Desktop    Downloads  Pictures	Templates  cs10   cs10w  cs14  cs61s  ucr-cs100
+Documents  Music      Public	Videos	   cs100  cs12	 cs61  text
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~[0;95m [0;36m$[0m cd cs100
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100[0;95m [0;36m$[0m ls
+firstrepo  lab2  rshell  test
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100[0;95m [0;36m$[0m cd rshell
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m ls
+LICENSE  Makefile  README.md  src  tests
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m make
+mkdir bin
+g++  src/main.cpp -o bin/rshell 
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m ls
+LICENSE  Makefile  README.md  bin  src	tests
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m bin/shellrshell[C[C[C[C[C
+mxu008@hammer.cs.ucr.edu$ ls
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ ls;         ls
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ ls   
+ls: cannot access : No such file or directory
+mxu008@hammer.cs.ucr.edu$ ls; ls
+LICENSE  Makefile  README.md  bin  src	tests
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ ls-  -a -l
+total 52
+drwx------ 6 mxu008 csmajs  4096 Oct 21 12:32 .
+drwx------ 6 mxu008 csmajs  4096 Oct 21 09:23 ..
+drwx------ 8 mxu008 csmajs  4096 Oct 21 12:10 .git
+-rw------- 1 mxu008 csmajs 18027 Oct 21 09:23 LICENSE
+-rw------- 1 mxu008 csmajs   135 Oct 21 11:54 Makefile
+-rw------- 1 mxu008 csmajs   774 Oct 21 12:10 README.md
+drwx------ 2 mxu008 csmajs  4096 Oct 21 12:32 bin
+drwx------ 2 mxu008 csmajs  4096 Oct 21 12:30 src
+drwx------ 2 mxu008 csmajs  4096 Oct 21 12:31 tests
+mxu008@hammer.cs.ucr.edu$ ls -l
+total 40
+-rw------- 1 mxu008 csmajs 18027 Oct 21 09:23 LICENSE
+-rw------- 1 mxu008 csmajs   135 Oct 21 11:54 Makefile
+-rw------- 1 mxu008 csmajs   774 Oct 21 12:10 README.md
+drwx------ 2 mxu008 csmajs  4096 Oct 21 12:32 bin
+drwx------ 2 mxu008 csmajs  4096 Oct 21 12:30 src
+drwx------ 2 mxu008 csmajs  4096 Oct 21 12:31 tests
+mxu008@hammer.cs.ucr.edu$ ls;ls
+LICENSE  Makefile  README.md  bin  src	tests
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$   wcho      echo      pwd
+/home/csmajs/mxu008/cs100/rshell
+mxu008@hammer.cs.ucr.edu$ pwd; ls; ls
+/home/csmajs/mxu008/cs100/rshell
+LICENSE  Makefile  README.md  bin  src	tests
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ echo hello world
+hello world
+mxu008@hammer.cs.ucr.edu$ echo ""^[[D     hello world"
+"hello world"
+mxu008@hammer.cs.ucr.edu$ ls
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ cd tests
+ls
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ cat Makefile
+MFLAHS = -Wall -Werror -ansi -pedantic
+
+all: rshell
+
+rshell:
+	mkdir bin
+	g++ $(MFLAGS) src/main.cpp -o bin/rshell 
+
+clean:
+	rm -rf bin
+mxu008@hammer.cs.ucr.edu$ ls&&ls
+LICENSE  Makefile  README.md  bin  src	tests
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ dasd||ls
+
+mxu008@hammer.cs.ucr.edu$ ls||dasd
+LICENSE  Makefile  README.md  bin  src	tests
+asd
+
+mxu008@hammer.cs.ucr.edu$ ls  asd||  &&ls
+
+mxu008@hammer.cs.ucr.edu$ ls&&dasd
+LICENSE  Makefile  README.md  bin  src	tests
+
+mxu008@hammer.cs.ucr.edu$ exit
+mxu008@hammer.cs.ucr.edu$ ^C
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m bin/rshell[Kbin/rshell
+mxu008@hammer.cs.ucr.edu$ ls
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ ls; pwd       ls    exit
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m exit[K[K[K[Kls[K[Klsls[K[K[K[Kexit
+exit
+~
+mxu008@hammer $ ls
+[0m[38;5;27mDesktop[0m/    [38;5;27mDownloads[0m/  [38;5;27mPictures[0m/  [38;5;27mTemplates[0m/  [38;5;27mcs10[0m/   [38;5;27mcs10w[0m/  [38;5;27mcs14[0m/  [38;5;27mcs61s[0m/  [38;5;27mucr-cs100[0m/
+[38;5;27mDocuments[0m/  [38;5;27mMusic[0m/      [38;5;27mPublic[0m/    [38;5;27mVideos[0m/     [38;5;27mcs100[0m/  [38;5;27mcs12[0m/   [38;5;27mcs61[0m/  [38;5;27mtext[0m/
+[m~
+mxu008@hammer $ exit
+exit
+
+Script done on Tue Oct 21 12:38:20 2014
