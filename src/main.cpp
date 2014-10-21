@@ -43,6 +43,7 @@ void execCmd(vector<char*> vc)
 	argv[i] = 0;
 
 	execvp(argv[0], argv);
+
 }
 
 void run(vector<char*> vc, char* hostname)
@@ -56,6 +57,7 @@ void run(vector<char*> vc, char* hostname)
 	else if (pid == 0)
 	{
 		execCmd(vc);
+		exit(1);
 	}
 	else
 	{
@@ -133,6 +135,7 @@ int main()
 					vector<char*> tmpVC = vstrToVchar(vs);
 				
 					execCmd(tmpVC);
+					exit(1);
 				}
 				else
 				{
@@ -172,6 +175,7 @@ int main()
 						{
 							continue;	
 						}
+						exit(1);
 					}
 					else
 					{
@@ -215,6 +219,7 @@ int main()
 						{
 							break;
 						}
+						exit(1);
 					}
 					else
 					{
@@ -229,6 +234,7 @@ int main()
 						else if (pid == 0)
 						{
 						//	execvp(tmpArgv[0], tmpArgv);
+							exit(1);//
 						}
 						else
 						{
