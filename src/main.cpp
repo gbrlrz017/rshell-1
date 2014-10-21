@@ -13,6 +13,9 @@ using namespace std;
 
 const int MAX = 1000;
 
+// This function change vector of string to vector of char*
+// Parameter: vector of strings
+// Return: vector of char*
 vector<char*> vstrToVchar(vector<string> vs)
 {
 	vector<char*> vc;	
@@ -29,6 +32,9 @@ vector<char*> vstrToVchar(vector<string> vs)
 	return vc;
 }
 
+// This function execute the input command
+// Parameter: vector of char*
+// Return: NULL
 void execCmd(vector<char*> vc)
 {
 	char* argv[sizeof(vc) + 1];
@@ -46,6 +52,9 @@ void execCmd(vector<char*> vc)
 
 }
 
+// This function help main function to run different processes
+// Parameter: vector of char*, hostname
+// return: NULL
 void run(vector<char*> vc, char* hostname)
 {
 	int pid = fork();
@@ -92,7 +101,7 @@ int main()
 			}
 		}
 
-		// If the input is "exit", then exit; 
+		// If the input is "exit", print out message and exit; 
 		if (strcmp(str, "exit") == 0)
 		{
 			cout << "logout" << endl << endl;
