@@ -1,0 +1,137 @@
+Script started on Tue Oct 21 13:22:10 2014
+~
+mxu008@hammer $ ls
+[0m[38;5;27mDesktop[0m/    [38;5;27mDownloads[0m/  [38;5;27mPictures[0m/  [38;5;27mTemplates[0m/  [38;5;27mcs10[0m/   [38;5;27mcs10w[0m/  [38;5;27mcs14[0m/  [38;5;27mcs61s[0m/  [38;5;27mucr-cs100[0m/
+[38;5;27mDocuments[0m/  [38;5;27mMusic[0m/      [38;5;27mPublic[0m/    [38;5;27mVideos[0m/     [38;5;27mcs100[0m/  [38;5;27mcs12[0m/   [38;5;27mcs61[0m/  [38;5;27mtext[0m/
+[m~
+mxu008@hammer $ cs100
+[0;91m
+===============================================================================
+|                                                                             |
+| You have enabled settings specific for cs100.                               |
+|                                                                             |
+===============================================================================
+[0m
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~[0;95m [0;36m$[0m ls
+Desktop    Downloads  Pictures	Templates  cs10   cs10w  cs14  cs61s  ucr-cs100
+Documents  Music      Public	Videos	   cs100  cs12	 cs61  text
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~[0;95m [0;36m$[0m cd cs100
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100[0;95m [0;36m$[0m ls
+firstrepo  lab2  rshell  test
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100[0;95m [0;36m$[0m cs[Kd rshell
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m ls
+LICENSE  Makefile  README.md  src  tests
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m cd [K[K[Kmake
+mkdir bin
+g++  src/main.cpp -o bin/rshell 
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m ls
+LICENSE  Makefile  README.md  bin  src	tests
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m bin/rshell
+mxu008@hammer.cs.ucr.edu$ ls
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$       ls
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ ;s
+mxu008@hammer.cs.ucr.edu$ ls
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ ls -l a
+.  ..  .git  LICENSE  Makefile	README.md  bin	src  tests
+mxu008@hammer.cs.ucr.edu$ ls -a -l
+total 52
+drwx------ 6 mxu008 csmajs  4096 Oct 21 13:22 .
+drwx------ 6 mxu008 csmajs  4096 Oct 21 09:23 ..
+drwx------ 8 mxu008 csmajs  4096 Oct 21 13:18 .git
+-rw------- 1 mxu008 csmajs 18027 Oct 21 09:23 LICENSE
+-rw------- 1 mxu008 csmajs   135 Oct 21 11:54 Makefile
+-rw------- 1 mxu008 csmajs   992 Oct 21 13:00 README.md
+drwx------ 2 mxu008 csmajs  4096 Oct 21 13:22 bin
+drwx------ 2 mxu008 csmajs  4096 Oct 21 13:15 src
+drwx------ 2 mxu008 csmajs  4096 Oct 21 13:21 tests
+mxu008@hammer.cs.ucr.edu$ ls  ;ls     exit
+logout
+
+[Process Completed]
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m bin/rshellls[Kbin/rshell
+mxu008@hammer.cs.ucr.edu$ ls
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ ls - -  ||  ;ls
+LICENSE  Makefile  README.md  bin  src	tests
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ ls; ls
+LICENSE  Makefile  README.md  bin  src	tests
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ ls;  ;ls
+ls: cannot access : No such file or directory
+ls: cannot access ls: No such file or directory
+mxu008@hammer.cs.ucr.edu$ ls  ls||  ; pwd
+LICENSE  Makefile  README.md  bin  src	tests
+/home/csmajs/mxu008/cs100/rshell
+mxu008@hammer.cs.ucr.edu$ ls;ls  pwd;ls;pwd
+LICENSE  Makefile  README.md  bin  src	tests
+/home/csmajs/mxu008/cs100/rshell
+LICENSE  Makefile  README.md  bin  src	tests
+/home/csmajs/mxu008/cs100/rshell
+mxu008@hammer.cs.ucr.edu$ echo hello world
+hello world
+mxu008@hammer.cs.ucr.edu$ echo ""^[[D      ""^[[D     hello world"
+"hello world"
+mxu008@hammer.cs.ucr.edu$ ls
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ car t Makefile
+MFLAHS = -Wall -Werror -ansi -pedantic
+
+all: rshell
+
+rshell:
+	mkdir bin
+	g++ $(MFLAGS) src/main.cpp -o bin/rshell 
+
+clean:
+	rm -rf bin
+mxu008@hammer.cs.ucr.edu$ ls;    ls
+LICENSE  Makefile  README.md  bin  src	tests
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ ls&&ls
+LICENSE  Makefile  README.md  bin  src	tests
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ ls&&pwd
+LICENSE  Makefile  README.md  bin  src	tests
+/home/csmajs/mxu008/cs100/rshell
+mxu008@hammer.cs.ucr.edu$ dasda&&ls
+mxu008@hammer.cs.ucr.edu$ ls&&dawdq
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ ls&&  ||    ls||ls  das
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ dasda||ls
+mxu008@hammer.cs.ucr.edu$ ls||ls
+LICENSE  Makefile  README.md  bin  src	tests
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ ls
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ exit
+logout
+
+[Process Completed]
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ exit
+logout
+
+[Process Completed]
+LICENSE  Makefile  README.md  bin  src	tests
+mxu008@hammer.cs.ucr.edu$ exit
+logout
+
+[Process Completed]
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m ls
+LICENSE  Makefile  README.md  bin  src	tests
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m make clean
+rm -rf bin
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m ls
+LICENSE  Makefile  README.md  src  tests
+[s%%%%%%%%%%[u[0;32mmxu008[0;36m@[0;32mcs100[0;36m:[0;32m~/cs100/rshell[0;95m (master) [0;36m$[0m exit
+exit
+~
+mxu008@hammer $ exit
+exit
+
+Script done on Tue Oct 21 13:27:36 2014
