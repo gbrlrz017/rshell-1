@@ -154,6 +154,7 @@ int main()
 				{
 					wait(NULL);
 					vs.pop_back();
+					//continue;
 				}	
 			}
 			else if (str[i] == '|')
@@ -245,7 +246,8 @@ int main()
 						}
 						else if (pid == 0)
 						{
-							exit(1);
+						//	execvp(tmpArgv[0], tmpArgv);
+							exit(1);//
 						}
 						else
 						{
