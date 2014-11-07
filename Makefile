@@ -13,5 +13,9 @@ cp:
 	mkdir bin
 	g++ $(MFLAGS) src/cp.cpp -o bin/cp
 
+ls:
+	mkdir bin
+	g++ $(MFLAGS) src/ls.cpp -o bin/ls
+
 clean:
 	rm -rf bin
