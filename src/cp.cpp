@@ -161,15 +161,15 @@ int main(int argc, char** argv)
 	{
 		if (s.st_mode & S_IFDIR)
 		{
-				cout << "Error: " << argv[1] << " is a directory." << endl;
-				return 1;
+			cout << "Error: " << argv[1] << " is a directory." << endl;
+			return 1;
 		}
 	}
 	
 	// With optional argument then print out wallclock, user, and system run times for three methods
 	if (argc == 4)
 	{
-			Timer t;
+		Timer t;
 		double time;
 		
 		// Print times for input.get() and output.put()
