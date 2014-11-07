@@ -19,7 +19,7 @@ Program Overview
 
 	(2) When there is optional argument, first print wallclock, user, and system run times, then copy the source file to the destination file.
 
-3. command ```ls``` is implemented and added, which can perform:
+3. command ```cd``` is implemented and added, which can perform:
 
 	(1)
 
