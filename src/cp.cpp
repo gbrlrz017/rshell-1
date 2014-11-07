@@ -148,11 +148,22 @@ int main(int argc, char** argv)
 		cout << "cp: missing file operand\nTry `cp --help' for more information." << endl; 
 	}
 	
-	// Check whether destination file is exists
+	// Check whether the destination file is exists
 	if (file_exists(argv[2]))
 	{
 		cout << "Error: " << argv[2] << " already exists." << endl;
 		return 1;
+	}
+	
+	// Check whether the source file is a directory
+	struct stat s;
+    if(stat(argv[1], &s) == 0)
+	{
+		if (s.st_mode & S_IFDIR)
+		{
+			cout << "Error: " << argv[1] << " is a directory." << endl;
+		    return 1;
+		}
 	}
 	
 	// With optional argument then print out wallclock, user, and system run times for three methods
